@@ -1,0 +1,1 @@
+[{"type":"deploy","id":"deploy","command":"NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program flask run --port 8080 --host 0.0.0.0","test_event":"","settings":{"port":"8080"}}]

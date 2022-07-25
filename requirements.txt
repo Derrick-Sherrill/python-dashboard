@@ -1,0 +1,6 @@
+flask
+datetime
+requests
+plotly
+pandas
+newrelic

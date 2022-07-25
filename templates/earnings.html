@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<form action="{{ url_for('employee_earnings') }}" method="post">
+  <div class="form-group">
+    <label for="employee">Employee Number</label>
+    <input type="text" class="form-control" id="employee" name='employee' aria-describedby="employee" placeholder="Filter on Employee Number">
+    <small id="employeehelp" class="form-text text-muted">Find all earnings of specific employee</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br><br>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Employee Number</th>
+      <th scope="col">Month</th>
+      <th scope="col">Day</th>
+      <th scope="col">Year</th>
+      <th scope="col">Earning Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for i in results%}
+
+    <tr>
+      <td>{{i[0]}}</td>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+    </tr>
+{%endfor%}
+  </tbody>
+</table>
+</div>
+{% endblock %}
